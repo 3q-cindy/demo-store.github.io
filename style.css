@@ -117,6 +117,9 @@ h1{
     overflow: hidden;
     cursor: pointer;
 }
+header h2{
+    font-size: 0;
+}
 /* header-hover */
 .header-top .button-icon .search-icon{
     background: url(img/ia_100000201.png) no-repeat scroll center 4px;
