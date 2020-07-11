@@ -21,10 +21,6 @@ a:hover{
 .box-clear{
     clear: both;
 }
-h1{
-    padding: 0;
-    margin: 0;
-}
 .invisible{
     font-size: 0;
     display: none;
@@ -116,6 +112,11 @@ h1{
     padding: auto 8px;
     overflow: hidden;
     cursor: pointer;
+}
+h1{
+    font-size: 0;
+    padding: 0;
+    margin: 0;
 }
 header h2{
     font-size: 0;
