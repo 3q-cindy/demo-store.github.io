@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    /* outline: 1px solid red; */
 }
 body{
     width: 100%;
@@ -30,11 +31,11 @@ a:hover{
     z-index: 10000;
     top: 0;
     left: 0;
-    width: 100vw;/*扣掉卷軸的問題*/
+    width: 100vw;
     height: 100vh;
     background-color: #fff;
     overflow: auto;
-    animation: load 3s;
+    animation: load 0s;   /*暫時*/
     animation-iteration-count:1;
     animation-fill-mode: forwards;
 }
@@ -88,12 +89,12 @@ a:hover{
     padding-top: 38px;
     float: left;
 }
-.header-top .top-menu{
+.header-top .menu{
     width: 780px;
     position: relative;
     float: left;
 }
-.dropdown-item{
+.menu-item{
     float: left;
     padding: 0 20px;
     padding-top: 65px;
@@ -436,24 +437,24 @@ header h2{
     font-size: 14px;
     font-weight: 300;
 }
-.main-product-buy .box-item .content .star{
+.main-product-buy  .star{
     display: inline-block;
     height: 13px;
     width: 100px;
 }
-.main-product-buy .box-item .content .star img + img{
+.main-product-buy .star img + img{
     margin-left: 3px;
 }
-.main-product-buy .box-item .content p{
+.main-product-buy  p{
    color: #999999;
 }
-.main-product-buy .box-item .content div{
+.main-product-buy div{
    font-weight: 600;
 }
-.main-product-buy .box-item .content strong{
+.main-product-buy .discount{
    color:red;
 }
-.main-product-buy .box-item .content del{
+.main-product-buy  .orgin-price{
    text-decoration: line-through;
    font-size: 10px;
    font-weight: 200;
@@ -465,19 +466,6 @@ header h2{
 
 .main-product{
     margin: 50px 0;
-}
-
-.text-box-up, .text-box-down{
-    position: absolute;
-    display: inline-block;
-    text-align: center;
-    list-style: none;
-    margin: 7px;
-    padding: 16px 20px 0 20px;
-    font-size: 16px;
-    line-height: 12px;
-    letter-spacing: 0.4px;
-    background-color: #ffffff;
 }
 .text-box-down{
     right:0;
@@ -541,20 +529,43 @@ header h2{
     margin-bottom: 15px;
     overflow: hidden;
 }
+.text-box-up, 
+.text-box-down{
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    background-color: #ffffff;
+}
 .main-product span,
 .main-product a:hover span{
    color: #f39787;
    font-size: 14px;
    letter-spacing: 1px;
    font-weight: 300;
+   margin: 0;
 }
-.main-product a:hover p{
+.main-product a:hover p,
+.main-product a p
+{
     color: #000;
+    padding: 3px 5px;
+    margin: 0;
 }
 /******************main-product-big*****************/
+.main-bigproduct{
+    padding-top: 50px;
+}
+.main-bigproduct:after{
+    clear: both;
+}
 .main-product-big{
     display: inline-block;
-    height: 580px;
+    height: auto;
 }
 .main-product-big .box-item{
     float: left;
@@ -669,10 +680,12 @@ header h2{
 }
 .footer-container .item{
     float: left;
-    /* width: 285px; */
     width: 266px;
     font-weight: 400;
     margin: 70px 0 0 0;
+}
+.footer-container .item +.item{
+    margin-left: 20px;
 }
 .footer-container .item:first-child{
     width: 400px;
@@ -695,22 +708,34 @@ header h2{
     margin: 25px 0;
     line-height: 2em;
 }
-.footer-container .item:first-child span{
-    text-indent: -22px;
-    transform: translateX(42px);
+.footer-container .information{
+    width: 342px;
 }
-.footer-container .item .box span{
-    width:150px;
-    line-height: 2em;
+.footer-container .information span{
+    text-indent: -10px;
+    line-height: 1.5em;
+    transform: translateX(25px);
+    margin-right: 25px;
 }
-.footer-container .item .box img, 
-.footer-container .item .box span
-{ 
+.footer-container i{
+    color: #f39787;
+    margin-right:  5px;
+    width: 5px;
+    font-size: 15px;
+}
+.footer-container .item .box p{
+    width:185px;
     height: 50px;
     float: left;
-    margin: 20px 20px 20px 0;
+    margin: 0;
+    height: auto;
     letter-spacing: normal;
-    line-height: 1.3em;
+    line-height: 2em;
+}
+.footer-container .item .box img{ 
+    height: 50px;
+    float: left;
+    padding-right: 20px;
 }
 /********footer-before***********/
 .footer-before{
@@ -782,14 +807,17 @@ header h2{
     width: 100%;
     padding: 15px;
 }
-.footer-after .item a{
+.footer-after  a{
     width: auto;
     margin: auto 5px;
     text-decoration: none;
     font-size: 12px;
     color: #333333;
 }
-.footer-after .sever a + a{
+.footer-after a:hover{
+    color: #f39787;
+}
+.footer-after .service a + a{
     box-sizing: border-box;
     border-left: black 1px solid;
     padding: 0 0 0 10px;
