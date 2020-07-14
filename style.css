@@ -725,7 +725,10 @@ header h2{
 }
 .footer-container .item .box p{
     width:185px;
-    height: 50px;
+    color: #666666;
+    font-weight: 100;
+    height: auto;
+    padding-bottom: 25px;
     float: left;
     margin: 0;
     height: auto;
@@ -749,7 +752,6 @@ header h2{
     top:35px;
 }
 .footer-before .itemail{
-    display: inline;
     width: 320px;
     font-size: 14px;
     font-weight: 800;
@@ -799,7 +801,7 @@ header h2{
     height:170px;
     text-align: center;
     position: relative;
-    border-top: 1px solid #333;
+    border-top: .4px solid #cccccc;
 }
 .footer-after .item
 {
